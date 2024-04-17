@@ -3,6 +3,7 @@ import FuturaPTBold from "./assets/fonts/FuturaPT-Bold.ttf";
 import FuturaPTBoldObl from "./assets/fonts/FuturaPT-BoldObl.ttf";
 import FuturaPTBook from "./assets/fonts/FuturaPT-Book.ttf";
 import FuturaPTLight from "./assets/fonts/FuturaPT-Light.ttf";
+import FuturaPTCondExtraBoldObl from "./assets/fonts/FuturaPTCond-ExtraBoldObl.ttf";
 
 let theme = createTheme({});
 
@@ -35,6 +36,13 @@ theme = createTheme(theme, {
     },
     MuiCssBaseline: {
       styleOverrides: `
+      @font-face {
+        font-family: "Futura PT";
+        src: url(${FuturaPTCondExtraBoldObl}) format('truetype');
+        font-weight: 800;
+        font-style: italic;
+      }
+
       @font-face {
         font-family: "Futura PT";
         src: url(${FuturaPTBoldObl}) format('truetype');

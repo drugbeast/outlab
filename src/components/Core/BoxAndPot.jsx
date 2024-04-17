@@ -52,7 +52,8 @@ function BoxAndPot() {
           opacity: "0.4",
           top: "256px",
           right: "348px",
-          boxShadow: "0 0 40px 64px #5d1499",
+          boxShadow: "0 0 40px 64px",
+          color: "accentColor.main",
           position: "absolute",
         }}
       />

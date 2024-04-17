@@ -41,7 +41,12 @@ function Header() {
           fontWeight: 700,
           backgroundColor: "accentColor.main",
           borderRadius: "0px",
+          "&:hover": {
+            backgroundColor: "accentColor.main"
+          }
         }}
+        disableElevation
+        disableRipple
       >
         {HEADER_BUTTON_TEXT}
       </Button>

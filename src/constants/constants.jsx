@@ -42,9 +42,9 @@ export const HEADER_NAVS = [
 
 export const HEADER_BUTTON_TEXT = "ЗАКАЗАТЬ"
 
-export const BANNER_TITLE = "ДОСТАВКА"
+export const DELIVERY_TITLE = "ДОСТАВКА"
 
-export const DELIVERY_ADVANTEGES = [
+export const DELIVERY_ADVANTAGES = [
   {
     id: 1,
     text: "КРУТАЯ ДОСТАВКА"

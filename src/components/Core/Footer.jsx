@@ -22,7 +22,9 @@ function Footer() {
         <Typography fontSize={36} mt="32px" fontWeight={300}>
           {FOOTER_EMAIL}
         </Typography>
-        <Typography fontSize={36} fontWeight={300}>{FOOTER_PHONE_NUMBER}</Typography>
+        <Typography fontSize={36} fontWeight={300}>
+          {FOOTER_PHONE_NUMBER}
+        </Typography>
         <Typography fontSize={24} mt="24px" fontWeight={300}>
           {FOOTER_WARNINGS[0]}
         </Typography>
@@ -37,7 +39,13 @@ function Footer() {
         <Box sx={{ display: "flex", flexDirection: "column", gap: "8px" }}>
           {FOOTER_SOCIALS.map((social) => (
             <Button
-              sx={{ height: "fit-content", fontFamily: "Roboto Condensed Variable", fontSize: "24px", color: "#ffffff", fontWeight: 400 }}
+              sx={{
+                height: "fit-content",
+                fontFamily: "Roboto Condensed Variable",
+                fontSize: "24px",
+                color: "textColor.main",
+                fontWeight: 400,
+              }}
               startIcon={social.icon}
               disableRipple
               key={social.id}
