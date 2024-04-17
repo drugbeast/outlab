@@ -1,14 +1,16 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Core/Header";
 import Footer from "./Core/Footer";
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 
 function Layout() {
   return (
-    <Box bgcolor="rgba(0, 0, 0, 1)">
-      <Header />
-      <Outlet />
-      <Footer />
+    <Box sx={{ backgroundColor: "bgColor.main" }}>
+      <Container maxWidth={false} sx={{ maxWidth: "1880px" }}>
+        <Header />
+        <Outlet />
+        <Footer />
+      </Container>
     </Box>
   );
 }
