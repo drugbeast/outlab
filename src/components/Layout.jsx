@@ -6,7 +6,7 @@ import { Box, Container } from "@mui/material";
 function Layout() {
   return (
     <Box sx={{ backgroundColor: "bgColor.main" }}>
-      <Container maxWidth={false} sx={{ maxWidth: "1880px" }}>
+      <Container maxWidth={false} sx={{ maxWidth: "1888px" }}>
         <Header />
         <Outlet />
         <Footer />

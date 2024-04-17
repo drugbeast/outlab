@@ -42,6 +42,39 @@ export const HEADER_NAVS = [
 
 export const HEADER_BUTTON_TEXT = "ЗАКАЗАТЬ"
 
+export const BANNER_TITLE = "ДОСТАВКА"
+
+export const DELIVERY_ADVANTEGES = [
+  {
+    id: 1,
+    text: "КРУТАЯ ДОСТАВКА"
+  },
+  {
+    id: 2,
+    text: "КРУТАЯ ДОСТАВКА"
+  },
+  {
+    id: 3,
+    text: "КРУТАЯ ДОСТАВКА"
+  },
+  {
+    id: 4,
+    text: "КРУТАЯ ДОСТАВКА"
+  },
+  {
+    id: 5,
+    text: "КРУТАЯ ДОСТАВКА"
+  },
+  {
+    id: 6,
+    text: "КРУТАЯ ДОСТАВКА"
+  }
+]
+
+export const DELIVERY_TEXT = "У НАС САМАЯ КРУТАЯ ДОСТАВКА У НАС САМАЯ КРУТАЯ ДОСТАВКА У НАС САМАЯ КРУТАЯ ДОСТАВКА У НАС САМАЯ КРУТАЯ ДОСТАВКА У НАС САМАЯ КРУТАЯ ДОСТАВКА"
+
+export const DELIVERY_BUTTON_TEXT = "ЗАКАЗАТЬ"
+
 export const FOOTER_TITLE = "СВЯЖИТЕСЬ С НАМИ!"
 
 export const FOOTER_ANNOUNCEMENT = "ПОЛУЧИТЕ ПРАЙС И ЗАКАЖИТЕ ТОВАР УЖЕ СЕЙЧАС"
