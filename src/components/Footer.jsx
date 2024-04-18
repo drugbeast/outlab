@@ -7,7 +7,7 @@ import {
   FOOTER_SOCIALS,
   FOOTER_TITLE,
   FOOTER_WARNINGS,
-} from "../../constants/constants";
+} from "../constants/constants";
 
 function Footer() {
   return (
@@ -16,19 +16,19 @@ function Footer() {
         <Typography sx={{ fontWeight: 700, fontStyle: "italic" }} fontSize={56}>
           {FOOTER_TITLE}
         </Typography>
-        <Typography mt="64px" fontSize={36} fontWeight={300}>
+        <Typography mt="64px" fontSize={36}>
           {FOOTER_ANNOUNCEMENT}
         </Typography>
-        <Typography fontSize={36} mt="32px" fontWeight={300}>
+        <Typography fontSize={36} mt="32px">
           {FOOTER_EMAIL}
         </Typography>
-        <Typography fontSize={36} fontWeight={300}>
+        <Typography fontSize={36}>
           {FOOTER_PHONE_NUMBER}
         </Typography>
-        <Typography fontSize={24} mt="24px" fontWeight={300}>
+        <Typography fontSize={24} mt="24px">
           {FOOTER_WARNINGS[0]}
         </Typography>
-        <Typography fontSize={24} mt="24px" fontWeight={300}>
+        <Typography fontSize={24} mt="24px">
           {FOOTER_WARNINGS[1]}
         </Typography>
         <Typography fontSize={56} fontWeight={700} mt="32px">

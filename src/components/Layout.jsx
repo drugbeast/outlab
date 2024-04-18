@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import Header from "./Core/Header";
-import Footer from "./Core/Footer";
+import Header from "./Header";
+import Footer from "./Footer";
 import { Box, Container } from "@mui/material";
 
 function Layout() {

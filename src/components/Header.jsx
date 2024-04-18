@@ -1,12 +1,20 @@
-import Logo from "../../assets/icons/logo.svg?react";
-import { Box, Link, List, Button } from "@mui/material";
+import Logo from "../assets/icons/logo.svg?react";
+import { Box, Link, List } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
-import { HEADER_NAVS, HEADER_BUTTON_TEXT } from "../../constants/constants.jsx";
+import { HEADER_NAVS } from "../constants/constants.jsx";
 import MenuIcon from "@mui/icons-material/Menu";
+import CustomButton from './Core/CustomButton'
 
 function Header() {
   return (
-    <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }} pt="32px">
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+      }}
+      pt="32px"
+    >
       <Logo />
       <List sx={{ display: "flex", gap: "48px", alignItems: "center" }}>
         {HEADER_NAVS.map((nav) => (
@@ -31,25 +39,7 @@ function Header() {
           </Box>
         ))}
       </List>
-      <Button
-        variant="contained"
-        sx={{
-          height: "fit-content",
-          fontFamily: "Roboto Condensed Variable",
-          padding: "16px 56px",
-          fontSize: "20px",
-          fontWeight: 700,
-          backgroundColor: "accentColor.main",
-          borderRadius: "0px",
-          "&:hover": {
-            backgroundColor: "accentColor.main"
-          }
-        }}
-        disableElevation
-        disableRipple
-      >
-        {HEADER_BUTTON_TEXT}
-      </Button>
+      <CustomButton variant="contained" />
     </Box>
   );
 }

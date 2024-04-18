@@ -30,7 +30,9 @@ theme = createTheme(theme, {
       styleOverrides: {
         root: {
           color: "#ffffff",
-          fontFamily: "Futura PT"
+          fontFamily: "Futura PT",
+          fontWeight: 300,
+          fontSize: "24px",
         },
       },
     },

@@ -1,9 +1,29 @@
-import circle from "../../assets/images/circle.png";
-import bannerPot from "../../assets/images/banner-pot.png";
-import bannerBox from "../../assets/images/banner-box.png";
+import circle from "../assets/images/circle.png";
 import { Box } from "@mui/material";
+import PropTypes from "prop-types";
 
-function BoxAndPot() {
+BoxAndPot.propTypes = {
+  imageFirst: PropTypes.string,
+  imageSecond: PropTypes.string,
+  leftFirst: PropTypes.string,
+  topFirst: PropTypes.string,
+  widthSecond: PropTypes.string,
+  rightSecond: PropTypes.string,
+  topSecond: PropTypes.string,
+  section: PropTypes.string,
+};
+
+function BoxAndPot(props) {
+  const {
+    imageFirst,
+    imageSecond,
+    leftFirst,
+    topFirst,
+    widthSecond,
+    rightSecond,
+    topSecond,
+    section,
+  } = props;
   return (
     <Box sx={{ position: "relative" }}>
       <Box sx={{ display: "flex", justifyContent: "center" }}>
@@ -60,11 +80,11 @@ function BoxAndPot() {
       <Box
         sx={{
           position: "absolute",
-          top: "40px",
-          left: "52px",
+          top: `${topFirst}`,
+          left: `${leftFirst}`,
           width: "600px",
-          animation: "box-levitation 2s linear infinite",
-          "@keyframes box-levitation": {
+          animation: "levitation-first 2s linear infinite",
+          "@keyframes levitation-first": {
             "0%": {
               transform: "translateY(10px)",
             },
@@ -77,30 +97,36 @@ function BoxAndPot() {
           },
         }}
         component="img"
-        src={bannerBox}
+        src={imageFirst}
       />
       <Box
         sx={{
           position: "absolute",
-          right: "-8px",
-          top: "-80px",
-          width: "600px",
-          animation: "pot-levitation 2s linear infinite",
-          transform: "rotate(30deg)",
-          "@keyframes pot-levitation": {
+          right: `${rightSecond}`,
+          top: `${topSecond}`,
+          width: `${widthSecond}`,
+          transform: section == "home" ? "" : "rotate(30deg)",
+          animation: "levitation-second 2s linear infinite",
+          "@keyframes levitation-second": {
             "0%": {
-              transform: "translateY(10px) rotate(30deg)",
+              transform: `translateY(10px) ${
+                section == "home" ? "" : "rotate(30deg)"
+              }`,
             },
             "50%": {
-              transform: "translateY(-10px) rotate(30deg)",
+              transform: `translateY(-10px) ${
+                section == "home" ? "" : "rotate(30deg)"
+              }`,
             },
             "100%": {
-              transform: "translateY(10px) rotate(30deg)",
+              transform: `translateY(10px) ${
+                section == "home" ? "" : "rotate(30deg)"
+              }`,
             },
           },
         }}
         component="img"
-        src={bannerPot}
+        src={imageSecond}
       />
     </Box>
   );
