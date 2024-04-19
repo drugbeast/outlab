@@ -58,7 +58,7 @@ export const OUTLINED_BUTTON_STYLES = {
   borderStyle: "solid",
   borderColor: "accentColor.main",
   borderRadius: 0,
-  color: "textColor.main",
+  color: "whiteColor.main",
   width: "fit-content",
   padding: "16px 56px",
   fontFamily: "Roboto Condensed Variable",
@@ -110,6 +110,12 @@ export const HOME_BANNER_TITLE = "ДИСТРИБЬЮТОР ОРИГИНАЛЬН�
 
 export const HOME_BANNER_INFORMATION_TEXT =
   "УЗНАВАЙТЕ О НОВИНКАХ, УСЛОВИЯХ ДОСТАВКИ, ЛИНЕЙКАХ ПРОДУКЦИИ НА НАШЕМ САЙТЕ";
+
+export const HOME_POPULAR_GOODS_TITLE = "ПОПУЛЯРНЫЕ ТОВАРЫ"
+
+export const HOME_WARNING_BLOCK_TITLE = "ОСТЕРЕГАЙТЕСЬ ПОДДЕЛОК!"
+
+export const HOME_WARNING_BLOCK_TEXT = "ОБРАЩАЙТЕ СВОЁ ВНИМАНИЕ НА ЦЕНУ, ДИЗАЙН УПАКОВКУ И ВКУС ПОКУПАЕМОЙ ЖИДКОСТИ"
 
 export const FOOTER_TITLE = "СВЯЖИТЕСЬ С НАМИ!";
 

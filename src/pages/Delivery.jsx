@@ -8,6 +8,7 @@ function Delivery() {
   return (
     <Banner
       content={<DeliveryBannerContent />}
+      paddingBottom="240px"
       boxAndPot={
         <BoxAndPot
           imageFirst={bannerBox}

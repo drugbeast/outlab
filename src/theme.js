@@ -14,7 +14,7 @@ theme = createTheme(theme, {
         main: "#000000",
       },
     }),
-    textColor: theme.palette.augmentColor({
+    whiteColor: theme.palette.augmentColor({
       color: {
         main: "#ffffff",
       },
