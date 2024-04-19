@@ -4,8 +4,8 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 import "./Slider.css";
 import PropTypes from "prop-types";
-import SliderPotCard from "../SliderPotCard"
-import SliderVideoCard from "../SliderVideoCard"
+import SliderPotCard from "../SliderPotCard";
+import SliderVideoCard from "../SliderVideoCard";
 
 Slider.propTypes = {
   slidesContent: PropTypes.array,
@@ -21,8 +21,8 @@ function Slider(props) {
       scrollbar={{ draggable: true }}
       modules={[Scrollbar]}
     >
-      {slidesContent.map((slide) => {
-        <SwiperSlide>
+      {slidesContent.map((slide) => (
+        <SwiperSlide key={slide.id}>
           {contentType == "pots" ? (
             <SliderPotCard content={slide} />
           ) : contentType == "videos" ? (
@@ -30,8 +30,8 @@ function Slider(props) {
           ) : (
             {}
           )}
-        </SwiperSlide>;
-      })}
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 }

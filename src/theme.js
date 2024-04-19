@@ -25,6 +25,11 @@ theme = createTheme(theme, {
         main: "#5d1499",
       },
     }),
+    grayColor: theme.palette.augmentColor({
+      color: {
+        main: "#595959",
+      },
+    }),
   },
   components: {
     MuiTypography: {

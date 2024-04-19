@@ -1,14 +1,18 @@
 .swiper-wrapper {
-  padding-bottom: 100px;
-  padding-top: 100px;
+  padding-top: 48px;
+  padding-bottom: 8px;
 }
 
 swiper-horizontal > .swiper-scrollbar,
 .swiper-scrollbar.swiper-scrollbar-horizontal {
-  background-color: green;
+  background-color: #595959;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
 }
 
 .swiper-scrollbar-drag {
-  background-color: red;
-  width: "100px";
+  background-color: #ffffff;
 }

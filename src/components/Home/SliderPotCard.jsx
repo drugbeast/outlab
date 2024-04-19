@@ -1,15 +1,22 @@
-import pineappleIce from "../assets/images/pineapple-ice.png";
 import { Box, Typography } from "@mui/material";
+import PropTypes from "prop-types";
+import { SLIDER_PODONKI_ADDITION } from "../../constants/constants";
+
+SliderPotCard.propTypes = {
+  content: PropTypes.object
+};
 
 function SliderPotCard(props) {
   const { content } = props;
+  const { image, line } = content;
   return (
     <Box
       sx={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        width: "200px",
+        gap: "32px",
+        width: "216px",
       }}
     >
       <Typography
@@ -17,9 +24,9 @@ function SliderPotCard(props) {
         fontWeight={500}
         textAlign="center"
       >
-        PODONKI V1
+        {SLIDER_PODONKI_ADDITION} {line}
       </Typography>
-      <Box sx={{ width: "173px" }} component="img" src={pineappleIce} />
+      <Box sx={{ height: "560px" }} component="img" src={image} />
     </Box>
   );
 }

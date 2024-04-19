@@ -118,7 +118,7 @@ export const HOME_WARNING_BLOCK_TITLE = "ОСТЕРЕГАЙТЕСЬ ПОДДЕЛ
 export const HOME_WARNING_BLOCK_TEXT =
   "ОБРАЩАЙТЕ СВОЁ ВНИМАНИЕ НА ЦЕНУ, ДИЗАЙН УПАКОВКУ И ВКУС ПОКУПАЕМОЙ ЖИДКОСТИ";
 
-export const HOME_TICKER_TEXT = [
+export const HOME_RUNNING_LINE_TEXT = [
   { id: 1, text: "АКЦИЗ" },
   { id: 2, text: "ОПЛАТА НА РС" },
   { id: 3, text: "РАБОТА В БЕЛУЮ" },
@@ -127,6 +127,41 @@ export const HOME_TICKER_TEXT = [
 ];
 
 export const HOME_OUR_LINES_TITLE = "НАШИ ЛИНЕЙКИ"
+
+export const HOME_REVIEWS_TITLE = "ОБЗОРЫ"
+
+export const SLIDER_PODONKI_ADDITION = "PODONKI"
+
+export const HOME_SLIDER_REVIEWS = [
+  {
+    id: 1,
+    link: "https://www.youtube.com/embed/Z74rPMGQzCY?si=OlMlOP1gQrQsSDAN&amp;start=0" 
+  },
+  {
+    id: 2,
+    link: "https://www.youtube.com/embed/1N1C_emq7n8?si=IAgGi3Lf18yjPEfQ&amp;start=0",
+  },
+  {
+    id: 3,
+    link: "https://www.youtube.com/embed/yEs3R3PlclY?si=bCYckRZX-7CPx6Gj&amp;start=0"
+  },
+  {
+    id: 4,
+    link: "https://www.youtube.com/embed/a9xwl6HwySw?si=IK82nLblMVOpW5ns&amp;start=0"
+  },
+  {
+    id: 5,
+    link: "https://www.youtube.com/embed/fABhzcP_lx4?si=xaS9kuhGey3Mk3Jn&amp;start=0" 
+  },
+  {
+    id: 6,
+    link: "https://www.youtube.com/embed/rMQiF4TaRvo?si=KG9wyL0qftSmrXbQ&amp;start=181" 
+  },
+  {
+    id: 7,
+    link: "https://www.youtube.com/embed/CnI7_gchq64?si=bVXuFEBPYhdZuxVb&amp;start=181"
+  },
+]
 
 export const FOOTER_TITLE = "СВЯЖИТЕСЬ С НАМИ!";
 
