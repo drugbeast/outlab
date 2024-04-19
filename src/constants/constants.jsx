@@ -163,6 +163,12 @@ export const HOME_SLIDER_REVIEWS = [
   },
 ]
 
+export const LINES_BANNER_TITLE = "PODONKI"
+
+export const LINES_BANNER_TEXT = "ЭТО СОВЕРШЕННО ДРУГОЙ НАКУР, СОВЕРШЕННО ДРУГАЯ ФОРМУЛА, НИКАКОГО ТХ"
+
+export const LINES_LIST_TITLE = "ТОВАРЫ ЛИНЕЙКИ"
+
 export const FOOTER_TITLE = "СВЯЖИТЕСЬ С НАМИ!";
 
 export const FOOTER_ANNOUNCEMENT = "ПОЛУЧИТЕ ПРАЙС И ЗАКАЖИТЕ ТОВАР УЖЕ СЕЙЧАС";

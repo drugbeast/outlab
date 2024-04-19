@@ -1,28 +1,26 @@
 import { Typography } from "@mui/material";
 import CustomButton from "../../components/Core/CustomButton";
 import {
-  HOME_BANNER_BRANDS,
-  HOME_BANNER_INFORMATION_TEXT,
-  HOME_BANNER_TITLE,
+  LINES_BANNER_TITLE,
+  LINES_BANNER_TEXT
 } from "../../constants/constants";
 
-function HomeBannerContent() {
+function LinesBannerContent() {
   return (
     <>
-      <Typography>{HOME_BANNER_BRANDS}</Typography>
       <Typography
         fontWeight={800}
         fontSize={52}
         fontStyle="italic"
       >
-        {HOME_BANNER_TITLE}
+        {LINES_BANNER_TITLE}
       </Typography>
       <Typography fontSize={36}>
-        {HOME_BANNER_INFORMATION_TEXT}
+        {LINES_BANNER_TEXT}
       </Typography>
       <CustomButton variant="outlined" />
     </>
-  );
+  )
 }
 
-export default HomeBannerContent;
+export default LinesBannerContent

@@ -17,6 +17,8 @@ function Goods(props) {
         sx={{
           display: "flex",
           justifyContent: "space-between",
+          flexWrap: "wrap",
+          gap: "160px",
           padding: "32px 0 112px",
         }}
       >
