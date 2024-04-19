@@ -1,0 +1,14 @@
+.swiper-wrapper {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  background-color: green;
+}
+
+.swiper-scrollbar-drag {
+  background-color: red;
+  width: "100px";
+}

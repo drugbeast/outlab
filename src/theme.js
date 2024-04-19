@@ -2,6 +2,7 @@ import { createTheme } from "@mui/material/styles";
 import FuturaPTBold from "./assets/fonts/FuturaPT-Bold.ttf";
 import FuturaPTBoldObl from "./assets/fonts/FuturaPT-BoldObl.ttf";
 import FuturaPTBook from "./assets/fonts/FuturaPT-Book.ttf";
+import FuturaPTBookObl from "./assets/fonts/FuturaPT-BookObl.ttf";
 import FuturaPTLight from "./assets/fonts/FuturaPT-Light.ttf";
 import FuturaPTCondExtraBoldObl from "./assets/fonts/FuturaPTCond-ExtraBoldObl.ttf";
 
@@ -62,6 +63,13 @@ theme = createTheme(theme, {
         font-family: "Futura PT";
         src: url(${FuturaPTBook}) format('truetype');
         font-weight: 400;
+      }
+
+      @font-face {
+        font-family: "Futura PT";
+        src: url(${FuturaPTBookObl}) format('truetype');
+        font-weight: 400;
+        font-style: italic;
       }
 
       @font-face {

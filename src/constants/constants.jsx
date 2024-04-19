@@ -70,7 +70,7 @@ export const OUTLINED_BUTTON_STYLES = {
   },
 };
 
-export const BUTTON_TEXT = "ЗАКАЗАТЬ"
+export const BUTTON_TEXT = "ЗАКАЗАТЬ";
 
 export const DELIVERY_TITLE = "ДОСТАВКА";
 
@@ -111,11 +111,22 @@ export const HOME_BANNER_TITLE = "ДИСТРИБЬЮТОР ОРИГИНАЛЬН�
 export const HOME_BANNER_INFORMATION_TEXT =
   "УЗНАВАЙТЕ О НОВИНКАХ, УСЛОВИЯХ ДОСТАВКИ, ЛИНЕЙКАХ ПРОДУКЦИИ НА НАШЕМ САЙТЕ";
 
-export const HOME_POPULAR_GOODS_TITLE = "ПОПУЛЯРНЫЕ ТОВАРЫ"
+export const HOME_POPULAR_GOODS_TITLE = "ПОПУЛЯРНЫЕ ТОВАРЫ";
 
-export const HOME_WARNING_BLOCK_TITLE = "ОСТЕРЕГАЙТЕСЬ ПОДДЕЛОК!"
+export const HOME_WARNING_BLOCK_TITLE = "ОСТЕРЕГАЙТЕСЬ ПОДДЕЛОК!";
 
-export const HOME_WARNING_BLOCK_TEXT = "ОБРАЩАЙТЕ СВОЁ ВНИМАНИЕ НА ЦЕНУ, ДИЗАЙН УПАКОВКУ И ВКУС ПОКУПАЕМОЙ ЖИДКОСТИ"
+export const HOME_WARNING_BLOCK_TEXT =
+  "ОБРАЩАЙТЕ СВОЁ ВНИМАНИЕ НА ЦЕНУ, ДИЗАЙН УПАКОВКУ И ВКУС ПОКУПАЕМОЙ ЖИДКОСТИ";
+
+export const HOME_TICKER_TEXT = [
+  { id: 1, text: "АКЦИЗ" },
+  { id: 2, text: "ОПЛАТА НА РС" },
+  { id: 3, text: "РАБОТА В БЕЛУЮ" },
+  { id: 4, text: "БЫСТРАЯ ДОСТАВКА" },
+  { id: 5, text: "ТОВАР ПОДТВЕРЖДЕН" },
+];
+
+export const HOME_OUR_LINES_TITLE = "НАШИ ЛИНЕЙКИ"
 
 export const FOOTER_TITLE = "СВЯЖИТЕСЬ С НАМИ!";
 
