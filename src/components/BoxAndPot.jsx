@@ -1,12 +1,14 @@
-import circle from "../assets/images/circle.png";
 import { Box } from "@mui/material";
 import PropTypes from "prop-types";
+
+import circle from "../assets/images/circle.png";
 
 BoxAndPot.propTypes = {
   imageFirst: PropTypes.string,
   imageSecond: PropTypes.string,
   leftFirst: PropTypes.string,
   topFirst: PropTypes.string,
+  widthFirst: PropTypes.string,
   widthSecond: PropTypes.string,
   rightSecond: PropTypes.string,
   topSecond: PropTypes.string,
@@ -19,6 +21,7 @@ function BoxAndPot(props) {
     imageSecond,
     leftFirst,
     topFirst,
+    widthFirst,
     widthSecond,
     rightSecond,
     topSecond,
@@ -29,7 +32,7 @@ function BoxAndPot(props) {
       <Box sx={{ display: "flex", justifyContent: "center" }}>
         <Box
           sx={{
-            width: "679px",
+            width: "80%",
             animation: "outer-spin 30s linear infinite",
             "@keyframes outer-spin": {
               "0%": {
@@ -47,9 +50,9 @@ function BoxAndPot(props) {
       <Box
         sx={{
           position: "absolute",
-          top: "105px",
-          left: "207px",
-          width: "469px",
+          top: "15%",
+          left: "22%",
+          width: "56%",
           animation: "inner-spin 30s linear infinite",
           "@keyframes inner-spin": {
             "0%": {
@@ -65,14 +68,14 @@ function BoxAndPot(props) {
       />
       <Box
         sx={{
-          width: "186px",
-          height: "166px",
+          width: "24%",
+          height: "25%",
           borderRadius: "50%",
           backgroundColor: "accentColor.main",
           opacity: "0.4",
-          top: "256px",
-          right: "348px",
-          boxShadow: "0 0 40px 64px",
+          top: "38%",
+          right: "38%",
+          boxShadow: "0 0 3vw 4vw",
           color: "accentColor.main",
           position: "absolute",
         }}
@@ -82,7 +85,7 @@ function BoxAndPot(props) {
           position: "absolute",
           top: `${topFirst}`,
           left: `${leftFirst}`,
-          width: "600px",
+          width: `${widthFirst}`,
           animation: "levitation-first 2s linear infinite",
           "@keyframes levitation-first": {
             "0%": {

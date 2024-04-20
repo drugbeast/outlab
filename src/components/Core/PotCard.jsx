@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
-import CustomButton from "./CustomButton";
 import PropTypes from "prop-types";
+
+import CustomButton from "./CustomButton";
 
 PotCard.propTypes = {
   image: PropTypes.string,
@@ -15,12 +16,12 @@ function PotCard(props) {
       sx={{
         display: "flex",
         flexDirection: "column",
-        width: "216px",
+        width: "17%",
         alignItems: "center",
         overflow: "hidden",
       }}
     >
-      <Box sx={{ height: "640px" }} component="img" src={image} />
+      <Box sx={{ height: "42vw" }} component="img" src={image} />
       <Typography
         sx={{ padding: "16px 0", lineHeight: "32px" }}
         fontFamily="Roboto Condensed Variable"

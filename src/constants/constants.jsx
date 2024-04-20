@@ -1,5 +1,10 @@
-import Whatsapp from "../assets/icons/whatsapp.svg?react";
 import Telegram from "../assets/icons/telegram.svg?react";
+import Whatsapp from "../assets/icons/whatsapp.svg?react";
+
+export const XLARGE_MEDIA_QUERY = "(min-width: 1300px)";
+export const LARGE_MEDIA_QUERY = "(min-width: 1000px) and (max-width: 1300px)";
+export const MEDIUM_MEDIA_QUERY = "(min-width: 768px) and (max-width: 1000px)";
+export const SMALL_MEDIA_QUERY = "(min-width: 395px) and (max-width: 768px)";
 
 export const PATHS = {
   home: "/",
@@ -40,34 +45,43 @@ export const HEADER_NAVS = [
   },
 ];
 
-export const CONTAINED_BUTTON_STYLES = {
-  height: "fit-content",
-  fontFamily: "Roboto Condensed Variable",
-  padding: "16px 56px",
-  fontSize: "20px",
-  fontWeight: 700,
-  backgroundColor: "accentColor.main",
-  borderRadius: "0px",
-  "&:hover": {
+export const CONTAINED_BUTTON_STYLES = (Large, XLarge) => {
+  return {
+    height: "fit-content",
+    fontFamily: "Roboto Condensed Variable",
+    padding: XLarge ? "16px 56px" : Large ? "12px 48px" : "16px 56px",
+    fontSize: "20px",
+    fontWeight: 700,
     backgroundColor: "accentColor.main",
-  },
+    borderRadius: "0px",
+    "&:hover": {
+      backgroundColor: "transparent",
+      borderColor: "accentColor.main",
+      borderStyle: "solid",
+      padding: "16px 53.5px",
+      borderWidth: "3px",
+    },
+  };
 };
 
-export const OUTLINED_BUTTON_STYLES = {
-  borderWidth: "3px",
-  borderStyle: "solid",
-  borderColor: "accentColor.main",
-  borderRadius: 0,
-  color: "whiteColor.main",
-  width: "fit-content",
-  padding: "16px 56px",
-  fontFamily: "Roboto Condensed Variable",
-  fontSize: "20px",
-  fontWeight: 700,
-  "&:hover": {
-    borderColor: "accentColor.main",
+export const OUTLINED_BUTTON_STYLES = (Large, XLarge) => {
+  return {
     borderWidth: "3px",
-  },
+    borderStyle: "solid",
+    borderColor: "accentColor.main",
+    borderRadius: 0,
+    color: "whiteColor.main",
+    width: "fit-content",
+    padding: XLarge ? "16px 56px" : Large ? "12px 48px" : "16px 56px",
+    fontFamily: "Roboto Condensed Variable",
+    fontSize: "20px",
+    fontWeight: 700,
+    "&:hover": {
+      borderColor: "accentColor.main",
+      borderWidth: "3px",
+      backgroundColor: "accentColor.main",
+    },
+  };
 };
 
 export const BUTTON_TEXT = "ЗАКАЗАТЬ";
@@ -126,16 +140,16 @@ export const HOME_RUNNING_LINE_TEXT = [
   { id: 5, text: "ТОВАР ПОДТВЕРЖДЕН" },
 ];
 
-export const HOME_OUR_LINES_TITLE = "НАШИ ЛИНЕЙКИ"
+export const HOME_OUR_LINES_TITLE = "НАШИ ЛИНЕЙКИ";
 
-export const HOME_REVIEWS_TITLE = "ОБЗОРЫ"
+export const HOME_REVIEWS_TITLE = "ОБЗОРЫ";
 
-export const SLIDER_PODONKI_ADDITION = "PODONKI"
+export const SLIDER_PODONKI_ADDITION = "PODONKI";
 
 export const HOME_SLIDER_REVIEWS = [
   {
     id: 1,
-    link: "https://www.youtube.com/embed/Z74rPMGQzCY?si=OlMlOP1gQrQsSDAN&amp;start=0" 
+    link: "https://www.youtube.com/embed/Z74rPMGQzCY?si=OlMlOP1gQrQsSDAN&amp;start=0",
   },
   {
     id: 2,
@@ -143,31 +157,32 @@ export const HOME_SLIDER_REVIEWS = [
   },
   {
     id: 3,
-    link: "https://www.youtube.com/embed/yEs3R3PlclY?si=bCYckRZX-7CPx6Gj&amp;start=0"
+    link: "https://www.youtube.com/embed/yEs3R3PlclY?si=bCYckRZX-7CPx6Gj&amp;start=0",
   },
   {
     id: 4,
-    link: "https://www.youtube.com/embed/a9xwl6HwySw?si=IK82nLblMVOpW5ns&amp;start=0"
+    link: "https://www.youtube.com/embed/a9xwl6HwySw?si=IK82nLblMVOpW5ns&amp;start=0",
   },
   {
     id: 5,
-    link: "https://www.youtube.com/embed/fABhzcP_lx4?si=xaS9kuhGey3Mk3Jn&amp;start=0" 
+    link: "https://www.youtube.com/embed/fABhzcP_lx4?si=xaS9kuhGey3Mk3Jn&amp;start=0",
   },
   {
     id: 6,
-    link: "https://www.youtube.com/embed/rMQiF4TaRvo?si=KG9wyL0qftSmrXbQ&amp;start=181" 
+    link: "https://www.youtube.com/embed/rMQiF4TaRvo?si=KG9wyL0qftSmrXbQ&amp;start=181",
   },
   {
     id: 7,
-    link: "https://www.youtube.com/embed/CnI7_gchq64?si=bVXuFEBPYhdZuxVb&amp;start=181"
+    link: "https://www.youtube.com/embed/CnI7_gchq64?si=bVXuFEBPYhdZuxVb&amp;start=181",
   },
-]
+];
 
-export const LINES_BANNER_TITLE = "PODONKI"
+export const LINES_BANNER_TITLE = "PODONKI";
 
-export const LINES_BANNER_TEXT = "ЭТО СОВЕРШЕННО ДРУГОЙ НАКУР, СОВЕРШЕННО ДРУГАЯ ФОРМУЛА, НИКАКОГО ТХ"
+export const LINES_BANNER_TEXT =
+  "ЭТО СОВЕРШЕННО ДРУГОЙ НАКУР, СОВЕРШЕННО ДРУГАЯ ФОРМУЛА, НИКАКОГО ТХ";
 
-export const LINES_LIST_TITLE = "ТОВАРЫ ЛИНЕЙКИ"
+export const LINES_LIST_TITLE = "ТОВАРЫ ЛИНЕЙКИ";
 
 export const FOOTER_TITLE = "СВЯЖИТЕСЬ С НАМИ!";
 

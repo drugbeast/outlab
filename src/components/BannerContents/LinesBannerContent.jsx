@@ -1,9 +1,9 @@
 import { Typography } from "@mui/material";
+
 import CustomButton from "../../components/Core/CustomButton";
 import {
-  LINES_BANNER_TITLE,
-  LINES_BANNER_TEXT
-} from "../../constants/constants";
+  LINES_BANNER_TEXT,
+  LINES_BANNER_TITLE} from "../../constants/constants";
 
 function LinesBannerContent() {
   return (

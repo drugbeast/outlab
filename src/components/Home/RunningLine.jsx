@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+
 import { HOME_RUNNING_LINE_TEXT } from "../../constants/constants";
 
 function RunningLine() {
@@ -6,7 +7,7 @@ function RunningLine() {
     <Box
       sx={{
         display: "flex",
-        animation: "running-line 10s linear infinite",
+        animation: "running-line 15s linear infinite",
       }}
     >
       {HOME_RUNNING_LINE_TEXT.map((item) => (

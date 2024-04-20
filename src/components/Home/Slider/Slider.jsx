@@ -1,23 +1,26 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Scrollbar } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import "./Slider.css";
+
 import PropTypes from "prop-types";
+import { Scrollbar } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 import SliderPotCard from "../SliderPotCard";
 import SliderVideoCard from "../SliderVideoCard";
 
 Slider.propTypes = {
   slidesContent: PropTypes.array,
+  slidesPerView: PropTypes.number,
   contentType: PropTypes.string,
 };
 
 function Slider(props) {
-  const { slidesContent, contentType } = props;
+  const { slidesContent, slidesPerView, contentType } = props;
   return (
     <Swiper
       spaceBetween={50}
-      slidesPerView={5}
+      slidesPerView={slidesPerView}
       scrollbar={{ draggable: true }}
       modules={[Scrollbar]}
     >

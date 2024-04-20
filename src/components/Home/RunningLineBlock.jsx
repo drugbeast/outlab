@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+
 import promotional from "../../assets/videos/promotional.mp4";
 import RunningLine from "./RunningLine";
 

@@ -1,4 +1,5 @@
-import { Typography, Box, Button, Container } from "@mui/material";
+import { Box, Button, Container,Typography } from "@mui/material";
+
 import {
   FOOTER_AGE,
   FOOTER_ANNOUNCEMENT,
@@ -54,6 +55,7 @@ function Footer() {
                   startIcon={social.icon}
                   disableRipple
                   key={social.id}
+                  href="https://t.me/opt_distr"
                 >
                   {social.text}
                 </Button>

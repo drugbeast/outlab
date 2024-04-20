@@ -1,5 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
 import PropTypes from "prop-types";
+
 import PotCard from "./PotCard";
 
 Goods.propTypes = {
@@ -18,7 +19,7 @@ function Goods(props) {
           display: "flex",
           justifyContent: "space-between",
           flexWrap: "wrap",
-          gap: "160px",
+          gap: "40px 3%",
           padding: "32px 0 112px",
         }}
       >

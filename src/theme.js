@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material/styles";
+
 import FuturaPTBold from "./assets/fonts/FuturaPT-Bold.ttf";
 import FuturaPTBoldObl from "./assets/fonts/FuturaPT-BoldObl.ttf";
 import FuturaPTBook from "./assets/fonts/FuturaPT-Book.ttf";

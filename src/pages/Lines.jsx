@@ -1,12 +1,13 @@
 import { Box } from "@mui/material";
-import Banner from "../components/Core/Banner";
+
+import bannerBox from "../assets/images/banner-box.png";
+import bannerPot from "../assets/images/banner-pot.png";
 import LinesBannerContent from "../components/BannerContents/LinesBannerContent";
 import BoxAndPot from "../components/BoxAndPot";
-import bannerPot from "../assets/images/banner-pot.png";
-import bannerBox from "../assets/images/banner-box.png";
+import Banner from "../components/Core/Banner";
+import Goods from "../components/Core/Goods"
 import { LINES_LIST_TITLE } from "../constants/constants";
 import { LINES } from "../constants/lines";
-import Goods from "../components/Core/Goods"
 
 function Lines() {
   return (
@@ -19,11 +20,12 @@ function Lines() {
             <BoxAndPot
               imageFirst={bannerBox}
               imageSecond={bannerPot}
-              leftFirst="52px"
-              topFirst="40px"
-              widthSecond="600px"
-              rightSecond="-8px"
-              topSecond="-80px"
+              leftFirst="3%"
+              topFirst="3%"
+              widthFirst="72%"
+              widthSecond="68%"
+              rightSecond="-1%"
+              topSecond="-10%"
               section="lines"
             />
           }

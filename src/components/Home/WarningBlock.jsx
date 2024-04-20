@@ -1,4 +1,5 @@
 import { Typography } from "@mui/material";
+
 import {
   HOME_WARNING_BLOCK_TEXT,
   HOME_WARNING_BLOCK_TITLE,

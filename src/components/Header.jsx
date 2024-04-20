@@ -1,13 +1,43 @@
-import Logo from "../assets/icons/logo.svg?react";
-import { Box, Link, List, Container } from "@mui/material";
-import { Link as RouterLink } from "react-router-dom";
-import { HEADER_NAVS } from "../constants/constants.jsx";
+import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Box, Container, IconButton, Link, List } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useState } from "react";
+import { Link as RouterLink } from "react-router-dom";
+
+import Logo from "../assets/icons/logo.svg?react";
+import {
+  HEADER_NAVS,
+  LARGE_MEDIA_QUERY,
+  MEDIUM_MEDIA_QUERY,
+  PATHS,
+  SMALL_MEDIA_QUERY,
+  XLARGE_MEDIA_QUERY,
+} from "../constants/constants.jsx";
+import BurgerMenu from "./Core/BurgerMenu";
 import CustomButton from "./Core/CustomButton";
 
 function Header() {
+  const Large = useMediaQuery(LARGE_MEDIA_QUERY);
+  const XLarge = useMediaQuery(XLARGE_MEDIA_QUERY);
+  const Medium = useMediaQuery(MEDIUM_MEDIA_QUERY);
+  const Small = useMediaQuery(SMALL_MEDIA_QUERY);
+  const [isOpen, setOpen] = useState(false);
   return (
-    <Box>
+    <Box
+      sx={
+        Medium || Small
+          ? {
+              position: "fixed",
+              display: "flex",
+              backgroundColor: "bgColor.main",
+              justifyContent: "space-between",
+              width: "100vw",
+              zIndex: 1000,
+            }
+          : null
+      }
+    >
       <Container maxWidth={false} sx={{ maxWidth: "1888px" }}>
         <Box
           sx={{
@@ -17,31 +47,76 @@ function Header() {
           }}
           pt="32px"
         >
-          <Logo />
-          <List sx={{ display: "flex", gap: "48px", alignItems: "center" }}>
-            {HEADER_NAVS.map((nav) => (
-              <Box
-                sx={{ display: "flex", alignItems: "center", gap: "8px" }}
-                key={nav.id}
+          <Link
+            sx={{ cursor: "pointer" }}
+            underline="none"
+            component={RouterLink}
+            to={PATHS.home}
+          >
+            <Logo
+              width={XLarge ? "193px" : Large || Medium || Small ? "150px" : "193px"}
+            />
+          </Link>
+          {Medium || Small ? (
+            <>
+              {isOpen ? <BurgerMenu setOpen={setOpen} /> : null}
+              <IconButton
+                sx={{
+                  "& svg": {
+                    fontSize: 48,
+                  },
+                  cursor: "pointer",
+                }}
+                onClick={() => setOpen(!isOpen)}
               >
-                <Link
-                  sx={{
-                    fontFamily: "Roboto Condensed Variable",
-                    fontSize: "24px",
-                    fontWeight: 500,
-                  }}
-                  color="whiteColor.main"
-                  underline="none"
-                  component={RouterLink}
-                  to="/"
-                >
-                  {nav.text}
-                </Link>
-                {nav.id < 3 && <MenuIcon sx={{ color: "whiteColor.main" }} />}
-              </Box>
-            ))}
-          </List>
-          <CustomButton variant="contained" />
+                {!isOpen ? (
+                  <MenuIcon sx={{ color: "whiteColor.main" }} />
+                ) : (
+                  <CloseIcon sx={{ color: "whiteColor.main" }} />
+                )}
+              </IconButton>
+            </>
+          ) : (
+            <>
+              <List
+                sx={{
+                  display: "flex",
+                  gap: XLarge ? "48px" : Large ? "24px" : "48px",
+                  alignItems: "center",
+                }}
+              >
+                {HEADER_NAVS.map((nav) => (
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "8px",
+                      cursor: "pointer",
+                    }}
+                    key={nav.id}
+                  >
+                    <Link
+                      sx={{
+                        fontFamily: "Roboto Condensed Variable",
+                        fontSize: XLarge ? "24px" : Large ? "20px" : "24px",
+                        fontWeight: 500,
+                      }}
+                      color="whiteColor.main"
+                      underline="none"
+                      component={RouterLink}
+                      to={nav.path}
+                    >
+                      {nav.text}
+                    </Link>
+                    {nav.id < 3 && (
+                      <MenuIcon sx={{ color: "whiteColor.main" }} />
+                    )}
+                  </Box>
+                ))}
+              </List>
+              <CustomButton variant="contained" />
+            </>
+          )}
         </Box>
       </Container>
     </Box>

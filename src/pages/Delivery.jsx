@@ -1,8 +1,8 @@
-import BoxAndPot from "../components/BoxAndPot";
-import bannerPot from "../assets/images/banner-pot.png";
 import bannerBox from "../assets/images/banner-box.png";
-import Banner from "../components/Core/Banner";
+import bannerPot from "../assets/images/banner-pot.png";
 import DeliveryBannerContent from "../components/BannerContents/DeliveryBannerContent";
+import BoxAndPot from "../components/BoxAndPot";
+import Banner from "../components/Core/Banner";
 
 function Delivery() {
   return (
@@ -13,11 +13,12 @@ function Delivery() {
         <BoxAndPot
           imageFirst={bannerBox}
           imageSecond={bannerPot}
-          leftFirst="52px"
-          topFirst="40px"
-          widthSecond="600px"
-          rightSecond="-8px"
-          topSecond="-80px"
+          leftFirst="3%"
+          topFirst="3%"
+          widthFirst="72%"
+          widthSecond="68%"
+          rightSecond="-1%"
+          topSecond="-10%"
           section="delivery"
         />
       }

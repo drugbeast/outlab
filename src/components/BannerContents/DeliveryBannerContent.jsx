@@ -1,11 +1,12 @@
-import { Typography, Box } from "@mui/material";
-import {
-  DELIVERY_TITLE,
-  DELIVERY_ADVANTAGES,
-  DELIVERY_TEXT,
-} from "../../constants/constants";
+import { Box,Typography } from "@mui/material";
+
 import delivery from "../../assets/icons/delivery.png";
 import CustomButton from "../../components/Core/CustomButton";
+import {
+  DELIVERY_ADVANTAGES,
+  DELIVERY_TEXT,
+  DELIVERY_TITLE,
+} from "../../constants/constants";
 
 function DeliveryBannerContent() {
   return (
