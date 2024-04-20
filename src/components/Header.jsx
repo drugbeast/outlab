@@ -12,14 +12,12 @@ import {
   MEDIUM_MEDIA_QUERY,
   PATHS,
   SMALL_MEDIA_QUERY,
-  XLARGE_MEDIA_QUERY,
 } from "../constants/constants.jsx";
 import BurgerMenu from "./Core/BurgerMenu";
 import CustomButton from "./Core/CustomButton";
 
 function Header() {
   const Large = useMediaQuery(LARGE_MEDIA_QUERY);
-  const XLarge = useMediaQuery(XLARGE_MEDIA_QUERY);
   const Medium = useMediaQuery(MEDIUM_MEDIA_QUERY);
   const Small = useMediaQuery(SMALL_MEDIA_QUERY);
   const [isOpen, setOpen] = useState(false);
@@ -53,9 +51,7 @@ function Header() {
             component={RouterLink}
             to={PATHS.home}
           >
-            <Logo
-              width={XLarge ? "193px" : Large || Medium || Small ? "150px" : "193px"}
-            />
+            <Logo width={Large || Medium || Small ? "150px" : "193px"} />
           </Link>
           {Medium || Small ? (
             <>
@@ -81,7 +77,7 @@ function Header() {
               <List
                 sx={{
                   display: "flex",
-                  gap: XLarge ? "48px" : Large ? "24px" : "48px",
+                  gap: Large ? "24px" : "48px",
                   alignItems: "center",
                 }}
               >
@@ -98,7 +94,7 @@ function Header() {
                     <Link
                       sx={{
                         fontFamily: "Roboto Condensed Variable",
-                        fontSize: XLarge ? "24px" : Large ? "20px" : "24px",
+                        fontSize: Large ? "20px" : "24px",
                         fontWeight: 500,
                       }}
                       color="whiteColor.main"

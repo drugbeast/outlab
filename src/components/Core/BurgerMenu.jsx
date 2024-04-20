@@ -6,8 +6,7 @@ import { Link as RouterLink } from "react-router-dom";
 
 import {
   HEADER_NAVS,
-  LARGE_MEDIA_QUERY,
-  XLARGE_MEDIA_QUERY,
+  MEDIUM_MEDIA_QUERY,
 } from "../../constants/constants.jsx";
 import CustomButton from "./CustomButton";
 
@@ -17,8 +16,7 @@ BurgerMenu.propTypes = {
 
 function BurgerMenu(props) {
   const { setOpen } = props;
-  const Large = useMediaQuery(LARGE_MEDIA_QUERY);
-  const XLarge = useMediaQuery(XLARGE_MEDIA_QUERY);
+  const Medium = useMediaQuery(MEDIUM_MEDIA_QUERY);
   return (
     <>
       <Box
@@ -56,7 +54,7 @@ function BurgerMenu(props) {
                 <Link
                   sx={{
                     fontFamily: "Roboto Condensed Variable",
-                    fontSize: XLarge ? "24px" : Large ? "20px" : "24px",
+                    fontSize: Medium ? "20px" : "24px",
                     fontWeight: 500,
                   }}
                   color="whiteColor.main"
