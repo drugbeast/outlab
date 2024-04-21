@@ -48,7 +48,7 @@ function RunningLineBlock() {
         <RunningLine />
         <RunningLine />
       </Box>
-      <video autoPlay loop muted style={{ width: "100%" }}>
+      <video autoPlay playsInline loop muted style={{ width: "100%" }}>
         <source src={promotional} type="video/mp4" />
       </video>
     </Box>
