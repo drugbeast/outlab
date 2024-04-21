@@ -3,7 +3,7 @@ import Whatsapp from "../assets/icons/whatsapp.svg?react";
 
 export const LARGE_MEDIA_QUERY = "(min-width: 1000px) and (max-width: 1300px)";
 export const MEDIUM_MEDIA_QUERY = "(min-width: 768px) and (max-width: 1000px)";
-export const SMALL_MEDIA_QUERY = "(min-width: 395px) and (max-width: 769px)";
+export const SMALL_MEDIA_QUERY = "(min-width: 375px) and (max-width: 769px)";
 
 export const PATHS = {
   home: "/",
@@ -48,7 +48,13 @@ export const CONTAINED_BUTTON_STYLES = (Large, Medium, Small) => {
   return {
     height: "fit-content",
     fontFamily: "Roboto Condensed Variable",
-    padding: Large ? "12px 48px" : Medium ? "8px 40px" : Small ? "8px 40px" : "16px 56px",
+    padding: Large
+      ? "12px 48px"
+      : Medium
+      ? "8px 40px"
+      : Small
+      ? "8px 40px"
+      : "16px 56px",
     fontSize: "20px",
     fontWeight: 700,
     backgroundColor: "accentColor.main",
@@ -71,7 +77,13 @@ export const OUTLINED_BUTTON_STYLES = (Large, Medium, Small) => {
     borderRadius: 0,
     color: "whiteColor.main",
     width: "fit-content",
-    padding: Large ? "12px 48px" : Medium ? "8px 40px" : Small ? "8px 40px" : "16px 56px",
+    padding: Large
+      ? "12px 48px"
+      : Medium
+      ? "8px 40px"
+      : Small
+      ? "8px 40px"
+      : "16px 56px",
     fontFamily: "Roboto Condensed Variable",
     fontSize: "20px",
     fontWeight: 700,
@@ -210,3 +222,5 @@ export const FOOTER_SOCIALS = [
     text: "WHATSAPP",
   },
 ];
+
+export const FOOTER_TELEGRAM_LINK = "https://t.me/opt_distr";

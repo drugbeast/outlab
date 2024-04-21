@@ -1,7 +1,8 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import PropTypes from "prop-types";
 
 import circle from "../assets/images/circle.png";
+import { SMALL_MEDIA_QUERY } from "../constants/constants";
 
 BoxAndPot.propTypes = {
   imageFirst: PropTypes.string,
@@ -16,6 +17,7 @@ BoxAndPot.propTypes = {
 };
 
 function BoxAndPot(props) {
+  const Small = useMediaQuery(SMALL_MEDIA_QUERY)
   const {
     imageFirst,
     imageSecond,
@@ -73,7 +75,7 @@ function BoxAndPot(props) {
           borderRadius: "50%",
           backgroundColor: "accentColor.main",
           opacity: "0.4",
-          top: "38%",
+          top: Small ? "31%" : "38%",
           right: "38%",
           boxShadow: "0 0 3vw 4vw",
           color: "accentColor.main",
