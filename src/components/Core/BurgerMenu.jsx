@@ -1,13 +1,19 @@
-import MenuIcon from "@mui/icons-material/Menu";
-import { Box, Link, List } from "@mui/material";
+import {
+  Box,
+  Link,
+  List,
+} from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import PropTypes from "prop-types";
+import { Fragment } from "react";
 import { Link as RouterLink } from "react-router-dom";
 
-import {
+import {  HEADER_DEVICES,
+HEADER_LINES, 
   HEADER_NAVS,
   MEDIUM_MEDIA_QUERY,
 } from "../../constants/constants.jsx";
+import BurgerAccordion from "./BurgerAccordion.jsx";
 import CustomButton from "./CustomButton";
 
 BurgerMenu.propTypes = {
@@ -37,35 +43,55 @@ function BurgerMenu(props) {
               flexDirection: "column",
               gap: "24px",
               alignItems: "center",
-              paddingTop: "80px",
+              paddingTop: "60px",
+              overflowY: "scroll",
             }}
           >
             {HEADER_NAVS.map((nav) => (
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  cursor: "pointer",
-                }}
-                onClick={() => setOpen(false)}
-                key={nav.id}
-              >
-                <Link
-                  sx={{
-                    fontFamily: "Roboto Condensed Variable",
-                    fontSize: Medium ? "20px" : "24px",
-                    fontWeight: 500,
-                  }}
-                  color="whiteColor.main"
-                  underline="none"
-                  component={RouterLink}
-                  to={nav.path}
-                >
-                  {nav.text}
-                </Link>
-                {nav.id < 3 && <MenuIcon sx={{ color: "whiteColor.main" }} />}
-              </Box>
+              <Fragment key={nav.id}>
+                {nav.id > 2 && (
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "8px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => setOpen(false)}
+                  >
+                    <Link
+                      sx={{
+                        fontFamily: "Roboto Condensed Variable",
+                        fontSize: Medium ? "20px" : "24px",
+                        fontWeight: 500,
+                      }}
+                      color="whiteColor.main"
+                      underline="none"
+                      component={RouterLink}
+                      to={nav.path}
+                    >
+                      {nav.text}
+                    </Link>
+                  </Box>
+                )}
+                {nav.id < 3 && (
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "8px",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <BurgerAccordion
+                      content={nav.id == 1 ? HEADER_DEVICES : nav.id == 2 ? HEADER_LINES : []}
+                      text={nav.text}
+                      setOpen={setOpen}
+                      path={nav.path}
+                    />
+                  </Box>
+                )}
+              </Fragment>
             ))}
           </List>
         </Box>

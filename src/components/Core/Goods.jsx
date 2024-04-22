@@ -21,11 +21,16 @@ function Goods(props) {
   const Small = useMediaQuery(SMALL_MEDIA_QUERY);
   return (
     <Container maxWidth={false} sx={{ maxWidth: "1888px" }}>
-      <Typography fontSize={Large ? 32 : Medium ? 26 : 36} textAlign={Small ? "center" : "left"}>{title}</Typography>
+      <Typography
+        fontSize={Large ? 32 : Medium ? 26 : 36}
+        textAlign={Small ? "center" : "left"}
+      >
+        {title}
+      </Typography>
       <Box
         sx={{
           display: "flex",
-          justifyContent: Large || Medium ? "center" : "space-between",
+          justifyContent: Large || Medium ? "center" : "flex-start",
           alignItems: Small ? "center" : "stretch",
           flexDirection: Small ? "column" : "row",
           flexWrap: "wrap",

@@ -44,6 +44,17 @@ export const HEADER_NAVS = [
   },
 ];
 
+export const HEADER_LINES = [
+  { id: 1, name: "АНАРХИЯ" },
+  { id: 2, name: "LAST HAP'KA" },
+  { id: 3, name: "V1" },
+  { id: 4, name: "V2" },
+];
+
+export const HEADER_DEVICES = [
+  {id: 1, name: "ДЕВАЙСОВ НЕТ!"}
+]
+
 export const CONTAINED_BUTTON_STYLES = (Large, Medium, Small) => {
   return {
     height: "fit-content",
