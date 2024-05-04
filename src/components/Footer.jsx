@@ -25,7 +25,7 @@ function Footer() {
   const Medium = useMediaQuery(MEDIUM_MEDIA_QUERY);
   const Small = useMediaQuery(SMALL_MEDIA_QUERY);
   return (
-    <Box>
+    <Box id="footer">
       <Container maxWidth={false} sx={{ maxWidth: "1888px" }}>
         <Box sx={{ display: "flex" }} pb="24px">
           <Box sx={{ width: Small ? "100%" : "60%" }}>

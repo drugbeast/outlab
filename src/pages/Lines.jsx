@@ -9,9 +9,8 @@ import BoxAndPot from "../components/BoxAndPot";
 import Banner from "../components/Core/Banner";
 import Goods from "../components/Core/Goods";
 import { LinesContext } from "../components/Layout";
-import { LINES_LIST_TITLE } from "../constants/constants";
+import { LINES, LINES_LIST_TITLE } from "../constants/constants";
 import { MEDIUM_MEDIA_QUERY, SMALL_MEDIA_QUERY } from "../constants/constants";
-import { LINES } from "../constants/lines";
 
 function Lines() {
   const Small = useMediaQuery(SMALL_MEDIA_QUERY);
@@ -22,7 +21,7 @@ function Lines() {
     <>
       <Box>
         <Banner
-          content={<LinesBannerContent />}
+          content={<LinesBannerContent title={line} />}
           paddingBottom={Medium ? "75px" : Small ? "45px" : "100px"}
           boxAndPot={
             <BoxAndPot
@@ -43,27 +42,26 @@ function Lines() {
         <Goods
           title={LINES_LIST_TITLE}
           goods={
-            line == "АНАРХИЯ"
-              ? LINES.anarchy.pots
-              : line == "LAST HAP'KA"
-              ? LINES.lastHapka.pots
-              : line == "V1"
-              ? LINES.v1.pots
-              : line == "V2"
-              ? LINES.v2.pots
-              : []
+            LINES.map((brand) => {
+              if (brand.id != "vliq-lines") {
+                return brand.items.filter((item) => item.name == line);
+              }
+              if (brand.id == "vliq-lines") {
+                const thirtyMlSearch = brand.items.thirtyML.filter(
+                  (item) => item.name == line
+                );
+                const oneHundredAndTwentyMLSearch =
+                  brand.items.oneHundredAndTwentyML.filter(
+                    (item) => item.name == line
+                  );
+                if (thirtyMlSearch.length == 0) {
+                  return oneHundredAndTwentyMLSearch;
+                }
+                return thirtyMlSearch;
+              }
+            }).filter((arr) => arr.length != 0)[0][0].goods
           }
-          line={
-            line == "АНАРХИЯ"
-              ? LINES.anarchy.line
-              : line == "LAST HAP'KA"
-              ? LINES.lastHapka.line
-              : line == "V1"
-              ? LINES.v1.line
-              : line == "V2"
-              ? LINES.v2.line
-              : ""
-          }
+          line={line}
         />
       </Box>
     </>

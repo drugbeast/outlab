@@ -14,10 +14,10 @@ import { Link as RouterLink } from "react-router-dom";
 
 import Logo from "../assets/icons/logo.svg?react";
 import {
-  HEADER_DEVICES,
-  HEADER_LINES,
+  DEVICES,
   HEADER_NAVS,
   LARGE_MEDIA_QUERY,
+  LINES,
   MEDIUM_MEDIA_QUERY,
   PATHS,
   SMALL_MEDIA_QUERY,
@@ -82,7 +82,7 @@ function Header() {
           </Link>
           {Medium || Small ? (
             <>
-              {isOpen ? <BurgerMenu setOpen={setOpen} /> : null}
+              <BurgerMenu setOpen={setOpen} isOpen={isOpen} />
               <IconButton
                 sx={{
                   "& svg": {
@@ -149,17 +149,47 @@ function Header() {
                           fontSize: Large ? "20px" : "24px",
                           fontWeight: 500,
                           textDecoration: "none",
+                          cursor: "pointer",
                         }}
                         color="whiteColor.main"
                       >
                         {nav.text}
                       </Typography>
+                    ) : nav.id == 3 ? (
+                      <Link
+                        href="#popularGoods"
+                        sx={{
+                          fontFamily: "Roboto Condensed Variable",
+                          fontSize: Large ? "20px" : "24px",
+                          fontWeight: 500,
+                          cursor: "pointer",
+                        }}
+                        color="whiteColor.main"
+                        underline="none"
+                      >
+                        {nav.text}
+                      </Link>
+                    ) : nav.id == 5 ? (
+                      <Link
+                        href="#footer"
+                        sx={{
+                          fontFamily: "Roboto Condensed Variable",
+                          fontSize: Large ? "20px" : "24px",
+                          fontWeight: 500,
+                          cursor: "pointer",
+                        }}
+                        color="whiteColor.main"
+                        underline="none"
+                      >
+                        {nav.text}
+                      </Link>
                     ) : (
                       <Link
                         sx={{
                           fontFamily: "Roboto Condensed Variable",
                           fontSize: Large ? "20px" : "24px",
                           fontWeight: 500,
+                          cursor: "pointer",
                         }}
                         color="whiteColor.main"
                         underline="none"
@@ -173,20 +203,22 @@ function Header() {
                       <MenuIcon sx={{ color: "whiteColor.main" }} />
                     )}
                     <PopUpMenu
-                      setAnchorEl={setDevicesAnchorEl}
-                      anchorEl={devicesAnchorEl}
-                      open={openDevicesMenu}
-                      labelledBy="devices"
-                      content={HEADER_DEVICES}
-                      path={PATHS.home}
-                    />
-                    <PopUpMenu
                       setAnchorEl={setLinesAnchorEl}
                       anchorEl={linesAnchorEl}
                       open={openLinesMenu}
                       labelledBy="lines"
-                      content={HEADER_LINES}
+                      content={LINES}
+                      contentType="lines"
                       path={PATHS.lines}
+                    />
+                    <PopUpMenu
+                      setAnchorEl={setDevicesAnchorEl}
+                      anchorEl={devicesAnchorEl}
+                      open={openDevicesMenu}
+                      labelledBy="devices"
+                      content={DEVICES}
+                      contentType="devices"
+                      path={PATHS.devices}
                     />
                   </Box>
                 ))}

@@ -1,5 +1,12 @@
 import Telegram from "../assets/icons/telegram.svg?react";
 import Whatsapp from "../assets/icons/whatsapp.svg?react";
+import { trainlabPodonkiLastHapkaBlaze, trainlabPodonkiLastHapkaBloodyValentines, trainlabPodonkiLastHapkaBornThisWay, trainlabPodonkiLastHapkaCrashTest, trainlabPodonkiLastHapkaHighVoltage, trainlabPodonkiLastHapkaInsertHere, trainlabPodonkiLastHapkaKindALonely, trainlabPodonkiLastHapkaMadnessWeek, trainlabPodonkiLastHapkaOnHold, trainlabPodonkiLastHapkaPoorPot } from ".";
+import { HUSKY_DEVICES } from "./devices/husky";
+import { TRAINLAB_DEVICES } from "./devices/trainlab";
+import { VLIQ_DEVICES } from "./devices/vliq";
+import { HUSKY_LINES } from "./lines/husky";
+import { TRAINLAB_LINES } from "./lines/trainlab";
+import { VLIQ_LINES } from "./lines/vliq";
 
 export const LARGE_MEDIA_QUERY = "(min-width: 1000px) and (max-width: 1300px)";
 export const MEDIUM_MEDIA_QUERY = "(min-width: 768px) and (max-width: 1000px)";
@@ -9,13 +16,14 @@ export const PATHS = {
   home: "/",
   lines: "/lines",
   delivery: "/delivery",
+  devices: "/devices"
 };
 
 export const HEADER_NAVS = [
   {
     id: 1,
     text: "ДЕВАЙСЫ",
-    path: PATHS.home,
+    path: PATHS.devices,
     isMenu: true,
   },
   {
@@ -44,17 +52,6 @@ export const HEADER_NAVS = [
   },
 ];
 
-export const HEADER_LINES = [
-  { id: 1, name: "АНАРХИЯ" },
-  { id: 2, name: "LAST HAP'KA" },
-  { id: 3, name: "V1" },
-  { id: 4, name: "V2" },
-];
-
-export const HEADER_DEVICES = [
-  {id: 1, name: "ДЕВАЙСОВ НЕТ!"}
-]
-
 export const CONTAINED_BUTTON_STYLES = (Large, Medium, Small) => {
   return {
     height: "fit-content",
@@ -70,12 +67,20 @@ export const CONTAINED_BUTTON_STYLES = (Large, Medium, Small) => {
     fontWeight: 700,
     backgroundColor: "accentColor.main",
     borderRadius: "0px",
+    borderWidth: "3px",
+    borderColor: "accentColor.main",
     "&:hover": {
       backgroundColor: "transparent",
+      borderWidth: "3px",
       borderColor: "accentColor.main",
       borderStyle: "solid",
-      padding: "16px 53.5px",
-      borderWidth: "3px",
+      padding: Large
+        ? "10px 46px"
+        : Medium
+        ? "6px 38px"
+        : Small
+        ? "6px 38px"
+        : "14px 54px",
     },
   };
 };
@@ -235,3 +240,93 @@ export const FOOTER_SOCIALS = [
 ];
 
 export const FOOTER_TELEGRAM_LINK = "https://t.me/opt_distr";
+
+export const POPULAR_GOODS = [
+  {
+    id: 1,
+    name: "BLAZE",
+    line: "PODONKI LAST HAP'KA",
+    image: trainlabPodonkiLastHapkaBlaze,
+  },
+  {
+    id: 2,
+    name: "BLOODY VALENTINE'S",
+    line: "PODONKI LAST HAP'KA",
+    image: trainlabPodonkiLastHapkaBloodyValentines,
+  },
+  {
+    id: 3,
+    name: "BORN THIS WAY",
+    line: "PODONKI LAST HAP'KA",
+    image: trainlabPodonkiLastHapkaBornThisWay,
+  },
+  {
+    id: 4,
+    name: "CRASH TEST",
+    line: "PODONKI LAST HAP'KA",
+    image: trainlabPodonkiLastHapkaCrashTest,
+  },
+  {
+    id: 5,
+    name: "HIGH VOLTAGE",
+    line: "PODONKI LAST HAP'KA",
+    image: trainlabPodonkiLastHapkaHighVoltage,
+  },
+];
+
+export const SLIDER_POTS = [
+  {
+    id: 1,
+    image: trainlabPodonkiLastHapkaBlaze,
+    line: "PODONKI LAST HAP'KA",
+  },
+  {
+    id: 2,
+    image: trainlabPodonkiLastHapkaBloodyValentines,
+    line: "PODONKI LAST HAP'KA",
+  },
+  {
+    id: 3,
+    image: trainlabPodonkiLastHapkaBornThisWay,
+    line: "PODONKI LAST HAP'KA",
+  },
+  {
+    id: 4,
+    image: trainlabPodonkiLastHapkaCrashTest,
+    line: "PODONKI LAST HAP'KA",
+  },
+  {
+    id: 5,
+    image: trainlabPodonkiLastHapkaHighVoltage,
+    line: "PODONKI LAST HAP'KA",
+  },
+  {
+    id: 6,
+    image: trainlabPodonkiLastHapkaInsertHere,
+    line: "PODONKI LAST HAP'KA",
+  },
+  {
+    id: 7,
+    image: trainlabPodonkiLastHapkaKindALonely,
+    line: "PODONKI LAST HAP'KA",
+  },
+  {
+    id: 8,
+    image: trainlabPodonkiLastHapkaMadnessWeek,
+    line: "PODONKI LAST HAP'KA",
+  },
+  {
+    id: 9,
+    image: trainlabPodonkiLastHapkaOnHold,
+    line: "PODONKI LAST HAP'KA",
+  },
+  {
+    id: 10,
+    image: trainlabPodonkiLastHapkaPoorPot,
+    line: "PODONKI LAST HAP'KA",
+  },
+];
+
+export const LINES = [TRAINLAB_LINES, HUSKY_LINES, VLIQ_LINES];
+
+export const DEVICES = [TRAINLAB_DEVICES, HUSKY_DEVICES, VLIQ_DEVICES]

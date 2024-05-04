@@ -1,18 +1,22 @@
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import PropTypes from "prop-types";
 
-import { LARGE_MEDIA_QUERY, MEDIUM_MEDIA_QUERY, SLIDER_PODONKI_ADDITION, SMALL_MEDIA_QUERY } from "../../constants/constants";
+import {
+  LARGE_MEDIA_QUERY,
+  MEDIUM_MEDIA_QUERY,
+  SMALL_MEDIA_QUERY,
+} from "../../constants/constants";
 
 SliderPotCard.propTypes = {
-  content: PropTypes.object
+  content: PropTypes.object,
 };
 
 function SliderPotCard(props) {
   const { content } = props;
   const { image, line } = content;
-  const Large = useMediaQuery(LARGE_MEDIA_QUERY)
-  const Medium = useMediaQuery(MEDIUM_MEDIA_QUERY)
-  const Small = useMediaQuery(SMALL_MEDIA_QUERY)
+  const Large = useMediaQuery(LARGE_MEDIA_QUERY);
+  const Medium = useMediaQuery(MEDIUM_MEDIA_QUERY);
+  const Small = useMediaQuery(SMALL_MEDIA_QUERY);
   return (
     <Box
       sx={{
@@ -29,9 +33,13 @@ function SliderPotCard(props) {
         textAlign="center"
         fontSize={Large || Medium ? 20 : 24}
       >
-        {SLIDER_PODONKI_ADDITION} {line}
+        {line}
       </Typography>
-      <Box sx={{ height: Small ? "70vh" : "42vw" }} component="img" src={image} />
+      <Box
+        sx={{ height: Small ? "70vh" : "42vw" }}
+        component="img"
+        src={image}
+      />
     </Box>
   );
 }

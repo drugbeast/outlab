@@ -1,9 +1,10 @@
 import "swiper/css";
 import "swiper/css/scrollbar";
 import "./Slider.css";
+import "swiper/css/autoplay";
 
 import PropTypes from "prop-types";
-import { Scrollbar } from "swiper/modules";
+import { Autoplay, Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import SliderPotCard from "../SliderPotCard";
@@ -22,7 +23,8 @@ function Slider(props) {
       spaceBetween={50}
       slidesPerView={slidesPerView}
       scrollbar={{ draggable: true }}
-      modules={[Scrollbar]}
+      modules={[Scrollbar, Autoplay]}
+      autoplay={contentType == "videos"}
     >
       {slidesContent.map((slide) => (
         <SwiperSlide key={slide.id}>

@@ -45,6 +45,15 @@ theme = createTheme(theme, {
     },
     MuiCssBaseline: {
       styleOverrides: `
+      html {
+        scroll-behavior: smooth;
+      }
+
+      ul[role="menu"] {
+        background-color: #000000;
+        border: 2px solid #5d1499;
+      }
+
       @font-face {
         font-family: "Futura PT";
         src: url(${FuturaPTCondExtraBoldObl}) format('truetype');

@@ -88,7 +88,7 @@ function BoxAndPot(props) {
           top: `${topFirst}`,
           left: `${leftFirst}`,
           width: `${widthFirst}`,
-          animation: "levitation-first 2s linear infinite",
+          animation: "levitation-first 4s linear infinite",
           "@keyframes levitation-first": {
             "0%": {
               transform: "translateY(10px)",
@@ -111,7 +111,7 @@ function BoxAndPot(props) {
           top: `${topSecond}`,
           width: `${widthSecond}`,
           transform: section == "home" ? "" : "rotate(30deg)",
-          animation: "levitation-second 2s linear infinite",
+          animation: "levitation-second 4s linear infinite",
           "@keyframes levitation-second": {
             "0%": {
               transform: `translateY(10px) ${
